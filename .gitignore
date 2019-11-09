@@ -1,0 +1,8 @@
+env/
+config.py
+/__pycache__
+.vscode
+migrations/
+logs/
+webapp.db
+readme.md

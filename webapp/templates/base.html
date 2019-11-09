@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>{{ title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+<!--Top navbar-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="navbar-collapse collapse">
+    <ul class="navbar-nav navbar-left">
+      <li class="nav-item"><a class="nav-link" href="{{ url_for('log.index') }}">Главная</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ url_for('user.user', username=current_user.username) }}"">Профиль</a></li>
+      <li class="nav-item"><a class="nav-link btn btn-primary" href="{{ url_for('user.logout') }}">Выход</a></li>
+    </ul>
+   </div>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="form-inline" action="/action_page.php">
+          <input class="form-control mr-sm-2" type="text" placeholder="Поиск">
+          <button class="btn btn-success" type="submit">Поиск</button>
+        </form>
+      </ul>  
+</nav>
+
+
+<!--sidebar-menu-->
+<div class="d-flex">
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="list-group list-group-flush">
+      <a href="{{ url_for('log.new_post') }}"" class="list-group-item list-group-item-action bg-light">Новая запись</a></li>
+      <a href="{{ url_for('user.edit_profile') }}" class="list-group-item list-group-item-action bg-light">Контакты</a></li>
+      <a href="{{ url_for('user.edit_profile') }}" class="list-group-item list-group-item-action bg-light">Документация</a></li>
+      <a href="{{ url_for('user.register') }}"" class="list-group-item list-group-item-action bg-light">Новый пользователь</a></li>
+    </div>
+  </div>
+
+<!--Body-->
+
+    <div class="container-fluid">
+    {% block content %}
+    {% endblock %}
+    </div>
+
+</body>
+
+</html>
