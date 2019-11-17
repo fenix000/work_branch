@@ -30,6 +30,9 @@ def create_app():
     from webapp.log.views import blueprint as log_bp
     app.register_blueprint(log_bp)
 
+    from webapp.error.handlers import blueprint as errors_bp
+    app.register_blueprint(errors_bp)
+
     from webapp.user.views import blueprint as user_bp
     app.register_blueprint(user_bp)
 

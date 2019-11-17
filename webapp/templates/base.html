@@ -5,16 +5,26 @@
   <title>{{ title }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/summernote-bs4.css') }}">
+
+  <script type="text/javascript"
+         src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script type="text/javascript"
+         src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <script type="text/javascript"
+         src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/summernote-bs4.js') }}"></script>
+
+
+
 
 </head>
 
 <body>
 <!--Top navbar-->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
   <div class="navbar-collapse collapse">
     <ul class="navbar-nav navbar-left">
       <li class="nav-item"><a class="nav-link" href="{{ url_for('log.index') }}">Главная</a></li>
@@ -31,11 +41,12 @@
 </nav>
 
 
+
 <!--sidebar-menu-->
-<div class="d-flex">
+<div class="d-flex" style="margin-top:58px">
   <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="list-group list-group-flush">
-      <a href="{{ url_for('log.new_post') }}"" class="list-group-item list-group-item-action bg-light">Новая запись</a></li>
+      <a href="{{ url_for('log.edit_post') }}"" class="list-group-item list-group-item-action bg-light">Новая запись</a></li>
       <a href="{{ url_for('user.edit_profile') }}" class="list-group-item list-group-item-action bg-light">Контакты</a></li>
       <a href="{{ url_for('user.edit_profile') }}" class="list-group-item list-group-item-action bg-light">Документация</a></li>
       <a href="{{ url_for('user.register') }}"" class="list-group-item list-group-item-action bg-light">Новый пользователь</a></li>
