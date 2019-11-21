@@ -2,63 +2,56 @@
 <html lang="ru">
 
 <head>
-  <title>{{ title }}</title>
+  <title>Work desk</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/summernote-bs4.css') }}">
 
-  <script type="text/javascript"
-         src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-  <script type="text/javascript"
-         src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
-  <script type="text/javascript"
-         src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/summernote-bs4.js') }}"></script>
-
-
-
 
 </head>
 
 <body>
-<!--Top navbar-->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <div class="navbar-collapse collapse">
-    <ul class="navbar-nav navbar-left">
-      <li class="nav-item"><a class="nav-link" href="{{ url_for('log.index') }}">Главная</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{ url_for('user.user', username=current_user.username) }}"">Профиль</a></li>
-      <li class="nav-item"><a class="nav-link btn btn-primary" href="{{ url_for('user.logout') }}">Выход</a></li>
-    </ul>
-   </div>
-      <ul class="nav navbar-nav navbar-right">
-        <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="Поиск">
-          <button class="btn btn-success" type="submit">Поиск</button>
-        </form>
-      </ul>  
-</nav>
+  <!--Top navbar-->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <div class="navbar-collapse collapse">
+      <ul class="navbar-nav navbar-left">
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('log.index') }}">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('log.edit_post') }}">Новая запись</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('log.edit_post') }}">Документация</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('log.edit_post') }}">Контакты</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('user.user', username=current_user.username) }}"">Профиль</a></li>
 
-
-
-<!--sidebar-menu-->
-<div class="d-flex" style="margin-top:58px">
-  <div class="bg-light border-right" id="sidebar-wrapper">
-    <div class="list-group list-group-flush">
-      <a href="{{ url_for('log.edit_post') }}"" class="list-group-item list-group-item-action bg-light">Новая запись</a></li>
-      <a href="{{ url_for('user.edit_profile') }}" class="list-group-item list-group-item-action bg-light">Контакты</a></li>
-      <a href="{{ url_for('user.edit_profile') }}" class="list-group-item list-group-item-action bg-light">Документация</a></li>
-      <a href="{{ url_for('user.register') }}"" class="list-group-item list-group-item-action bg-light">Новый пользователь</a></li>
+      <li class=" nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Админка</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{{ url_for('user.register') }}">Новый пользователь</a>
+              <a class="dropdown-item" href="{{ url_for('user.user_list') }}">Список пользователей</a>
+            </div>
+        </li>
+        <li class="nav-item"><a class="nav-link btn btn-primary" href="{{ url_for('user.logout') }}">Выход</a></li>
+      </ul>
     </div>
-  </div>
+    <ul class="nav navbar-nav navbar-right">
+      <form class="form-inline" action="/action_page.php">
+        <input class="form-control mr-sm-2" type="text" placeholder="Поиск">
+        <button class="btn btn-success" type="submit">Поиск</button>
+      </form>
+    </ul>
+  </nav>
 
-<!--Body-->
 
-    <div class="container-fluid">
+  <!--Body-->
+
+  <div class="container-fluid">
     {% block content %}
     {% endblock %}
-    </div>
+  </div>
 
 </body>
 

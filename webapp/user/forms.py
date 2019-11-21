@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import BooleanField, PasswordField, StringField, SubmitField, TextAreaField
+from wtforms import BooleanField, PasswordField, StringField, SubmitField, TextAreaField, SelectField
 from wtforms.validators import DataRequired, Email, EqualTo, Length, ValidationError
+from flask_wtf.file import FileField, FileAllowed, FileRequired
 
 from webapp.user.models import User
 
@@ -12,10 +13,13 @@ class LoginForm(FlaskForm):
 
 class UserFormRegistration(FlaskForm):
     username = StringField('Логин', validators=[DataRequired()], render_kw={"class": "form-control"})
-    email = StringField('Почта', validators=[DataRequired(), Email()], render_kw={"class": "form-control"})
+    fullname = StringField('Фамилия и Имя', validators=[DataRequired()], render_kw={"class": "form-control"})
+    email = StringField('Почта', render_kw={"class": "form-control"})
+    phone = StringField('Телефон', render_kw={"class": "form-control"})
+    role = SelectField('Права', choices = [('user', 'user'), ('admin', 'admin')], render_kw={"class": "form-control"})
     password = PasswordField('Пароль', validators=[DataRequired()], render_kw={"class": "form-control"})
     password2 = PasswordField('Повторите пароль', validators = [DataRequired(), EqualTo('password')], render_kw={"class": "form-control"})
-    submit = SubmitField('Регистрация', render_kw={"class": "btn btn-primary"})
+    submit = SubmitField('Добавить', render_kw={"class": "btn btn-primary"})
     
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
@@ -29,9 +33,12 @@ class UserFormRegistration(FlaskForm):
 
 
 class EditProfileForm(FlaskForm):
-    username = StringField('Имя', validators=[DataRequired()], render_kw={"class": "form-group"})
-    about_me = TextAreaField('Обо мне', validators=[Length(min=0, max=140)], render_kw={"class": "form-group"})
-    submit = SubmitField('Готово', render_kw={"class": "btn btn-primary"})
+    username = StringField('Логин', validators=[DataRequired()], render_kw={"class": "form-control"})
+    fullname = StringField('Фамилия и Имя', validators=[DataRequired()], render_kw={"class": "form-control"})
+    email = StringField('Почта', render_kw={"class": "form-control"})
+    phone = StringField('Телефон', render_kw={"class": "form-control"})
+    about_me = TextAreaField('Обо мне', validators=[Length(min=0, max=140)], render_kw={"class": "form-control"})
+    submit = SubmitField('Изменить', render_kw={"class": "btn btn-primary"})
  
     def __init__(self, original_username, *args, **kwargs):
         super(EditProfileForm, self).__init__(*args, **kwargs)
@@ -42,3 +49,15 @@ class EditProfileForm(FlaskForm):
             user = User.query.filter_by(username=self.username.data).first()
             if user is not None:
                 raise ValidationError('Please use a different username.')
+
+class ChangePasswordForm(FlaskForm):
+    password = PasswordField('Пароль', validators=[DataRequired()], render_kw={"class": "form-control"})
+    password2 = PasswordField('Повторите пароль', validators = [DataRequired(), EqualTo('password')], render_kw={"class": "form-control"})
+    submit = SubmitField('Изменить', render_kw={"class": "btn btn-primary"})
+
+# class UploadAvatarForm(FlaskForm):
+#     image = FileField('Загрузить: (<=3M)', validators=[
+#         FileRequired(),
+#         FileAllowed(['jpg', 'png'], 'Пожалуйста .jpg или .png.')
+#     ])
+#     submit = SubmitField()

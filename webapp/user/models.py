@@ -12,11 +12,13 @@ from webapp.db import db
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64),index=True, unique=True)
-    email = db.Column(db.String(64),index=True, unique=True)
+    fullname = db.Column(db.String(64),index=True, unique=True)
+    email = db.Column(db.String(64),index=True, unique=False, nullable=True)
     password = db.Column(db.String(128))
-    role = db.Column(db.String, index=True, default='user')
+    role = db.Column(db.String, index=True)
     posts = db.relationship('Post', backref='author', lazy='dynamic')
     about_me = db.Column(db.String(140))
+    phone = db.Column(db.String(30), nullable=True)
     last_seen = db.Column(db.DateTime, default=datetime.now)
 
     def avatar(self, size):

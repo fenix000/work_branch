@@ -1,22 +1,81 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container" style="margin-top:50px">
-        <table>
-            <tr valign="top">
-                <td><img src="{{ user.avatar(128) }}"></td>
-                <td>
-                    <h1>User: {{ user.username }}</h1>
-                    {% if user.about_me %}
-                    <p>{{ user.about_me }}</p>                       
-                    {% endif %}
-                    {% if user.last_seen %}
-                    <p>Last seen on: {{ user.last_seen.strftime('%d.%m.%Y') }}</p>
-                    {% endif %}
-                    <a class="nav-link btn btn-info" href="{{ url_for('user.edit_profile') }}">Редактировать</a>
-                </td>
-            </tr>
-        </table>
-    </div>
+<div class="container" style="margin-top:58px">
+    <div class="row">
+        <div class="col-sm-3">
+            <table>
+                <tr valign="top">
+                    <td><img src="{{ user.avatar(128) }}"></td>
+                    <td>
+                        <h1>{{ user.fullname }}</h1>
+                        {% if user.about_me %}
+                        <p>{{ user.about_me }}</p>
+                        {% endif %}
+                        {% if user.last_seen %}
+                        <p>Last seen on: {{ user.last_seen.strftime('%d.%m.%Y') }}</p>
+                        {% endif %}
+                        <a class="nav-link btn btn-info" href="{{ url_for('user.reset_password') }}">Изменить
+                            пароль</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-8">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="alert alert-warning" role="alert">
+                {% for message in messages %}
+                {{ message }}<br>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+
+            <form action="" method="POST" class="form-group">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.username.label }}
+                    {{ form.username() }}
+                    {% for error in form.username.errors %}
+                    <div class="alert alert-warning" role="alert">[{{ error }}]</div>
+                    {% endfor %}
+                </div>
+                <div class="form-group">
+                    {{ form.fullname.label }}
+                    {{ form.fullname() }}
+                    {% for error in form.fullname.errors %}
+                    <div class="alert alert-warning">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="form-group">
+                    {{ form.email.label }}
+                    {{ form.email() }}
+                    {% for error in form.email.errors %}
+                    <div class="alert alert-warning">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="form-group">
+                    {{ form.phone.label }}
+                    {{ form.phone() }}
+                    {% for error in form.phone.errors %}
+                    <div class="alert alert-warning">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="form-group">
+                    {{ form.about_me.label }}<br>
+                    {{ form.about_me(cols=33, rows=4) }}
+                    {% for error in form.about_me.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                {{ form.submit() }}
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

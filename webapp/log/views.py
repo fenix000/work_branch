@@ -48,7 +48,7 @@ def edit_post(id=None):
             edit_post.text = request.form.get('editordata')
             db.session.add(edit_post)
         else:
-            edit_post = Post(text=request.form.get('editordata'))
+            edit_post = Post(text=request.form.get('editordata'), author=current_user)
             db.session.add(edit_post)
         db.session.commit()
         flash('Запись добавлена!')
