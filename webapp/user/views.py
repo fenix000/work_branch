@@ -13,6 +13,7 @@ from webapp.log.models import Post
 
 blueprint = Blueprint('user', __name__, url_prefix='/user')
 
+
 @blueprint.before_request
 def before_request():
     if current_user.is_authenticated:
@@ -39,7 +40,7 @@ def login():
         return redirect(next_page)
     return render_template('user/login.html', form=form)
 
-# @app.route('/register') 
+# @app.route('/register')
 # def registration():
 #     title = 'Регистрация'
 #     form = UserFormRegistration
@@ -69,7 +70,7 @@ def registration():
         db.session.add(new_user)
         db.session.commit()
         flash('Пользователь зарегистрирован')
-        return redirect(url_for('log.index')) 
+        return redirect(url_for('log.index'))
     else:
         for field, errors in form.errors.items():
             for error in errors:
@@ -78,6 +79,7 @@ def registration():
                     error
                 ))
     return render_template('user/register.html', title=title, form=form)
+
 
 @blueprint.route('/user/<username>', methods=['GET', 'POST'])
 @login_required
@@ -112,7 +114,7 @@ def reset_password():
         db.session.commit()
         flash('Пароль изменен!')
         return redirect(url_for('user.logout'))
-    return render_template('user/reset_password.html',user=user, form=form)
+    return render_template('user/reset_password.html', user=user, form=form)
 
 
 @blueprint.route('user/user_list.html', methods=['GET', 'POST'])

@@ -16,7 +16,7 @@ from webapp.user.models import User
 
 login = LoginManager()
 login.login_view = 'user.login'
-# login.login_message = _l('Please log in to access this page.')
+
 
 def create_app():
     app = Flask(__name__)
@@ -39,18 +39,19 @@ def create_app():
     if not app.debug:
         if not os.path.exists('logs'):
             os.mkdir('logs')
-        file_handler = RotatingFileHandler('logs/log.log', maxBytes=10240, backupCount=10)
-        file_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
+        file_handler = RotatingFileHandler(
+            'logs/log.log', maxBytes=10240, backupCount=10)
+        file_handler.setFormatter(logging.Formatter(
+            '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
         file_handler.setLevel(logging.INFO)
         app.logger.addHandler(file_handler)
 
         app.logger.setLevel(logging.INFO)
         app.logger.info('Work_log startup')
 
+
     @login.user_loader
-    def load_user(user_id):
-        return User.query.get(user_id)
+    def load_user(id):
+        return User.query.get(int(id))
 
     return app
-
-# from webapp import routes, models

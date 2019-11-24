@@ -15,16 +15,16 @@
                     <textarea id="summernote" name="editordata" class='form-control'>{{edit_post.text}}</textarea>
                     <script>
                         $('#summernote').summernote({
-                        toolbar: [
-                            // [groupName, [list of button]]
-                            ['style', ['bold', 'italic', 'underline', 'clear']],
-                            ['fontsize', ['fontsize']],
-                            ['color', ['color']],
-                            ['para', ['ul', 'ol', 'paragraph']],
-                            ['height', ['height']]  
-                            ['table', ['table']],
-                            ['insert', ['link', 'picture', 'video']],
-                        ]
+                            toolbar: [
+                                // [groupName, [list of button]]
+                                ['style', ['bold', 'italic', 'underline', 'clear']],
+                                ['fontsize', ['fontsize']],
+                                ['color', ['color']],
+                                ['para', ['ul', 'ol', 'paragraph']],
+                                ['height', ['height']]
+                                ['table', ['table']],
+                                ['insert', ['link', 'picture', 'video']],
+                            ]
                         });
                     </script>
                 </div>
@@ -32,70 +32,72 @@
                     {# note we use same name for Save and Cancel buttons, but a different value #}
                     <button type="submit" name="submit" value="submit" class="btn btn-info">Сохранить</button>
                     {% if edit_post.id %}
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Удалить запись.</button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Удалить
+                        запись.</button>
                     <div class="modal" id="myModal">
                         <div class="modal-dialog">
-                          <div class="modal-content">
-                      
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                              <h4 class="modal-title">Точно удалить?</h4>
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Точно удалить?</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <a href="{{url_for('log.post_delete',id=edit_post.id)}}"><button type="button"
+                                            class="btn btn-danger">Удалить</button></a>
+                                    <button type="button" class="btn btn-success" data-dismiss="modal">Отмена</button>
+                                </div>
+
                             </div>
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                              <a href="{{url_for('log.post_delete',id=edit_post.id)}}"><button type="button" class="btn btn-danger">Удалить</button></a>
-                              <button type="button" class="btn btn-success" data-dismiss="modal">Отмена</button>
-                            </div>
-                      
-                          </div>
                         </div>
-                      </div>
+                    </div>
                     {% endif %}
                 </div>
             </form>
         </div>
-    </div>        
+    </div>
 </div>
 
 <div class="container" style="margin-top:30px">
-        <div class="row">
-            <div class="col-sm-10">
-        
-                <ul class="pagination">
-                    {% if prev_url %}
-                    <li class="page-item"><a class="page-link" href="{{ prev_url }}">Вперед</a></li>
-                    {% endif %}
-                    {% if next_url %}
-                    <li class="page-item"><a class="page-link" href="{{ next_url }}">Назад</a></li>
-                    {% endif %} 
-                </ul>
-         
+    <div class="row">
+        <div class="col-sm-10">
+
+            <ul class="pagination">
+                {% if prev_url %}
+                <li class="page-item"><a class="page-link" href="{{ prev_url }}">Вперед</a></li>
+                {% endif %}
+                {% if next_url %}
+                <li class="page-item"><a class="page-link" href="{{ next_url }}">Назад</a></li>
+                {% endif %}
+            </ul>
+
             {% for post in posts %}
-                <div class="card">
-                   <div class="card-header bg-info">
-                        <b> Автор:</b> {{ post.author.username }}
-                        <b> Дата:</b> {{ post.timestamp.strftime('%H:%M  %d.%m.%Y') }}
-                        <b>ID:</b> 
-                   </div> 
-                   <div class="card-body">{{ post.text|safe }}</div>                  
-               </div>
-               <br>
-           {% endfor %}
-        
-        
-                <ul class="pagination">
-                    {% if prev_url %}
-                    <li class="page-item"><a class="page-link" href="{{ prev_url }}">Вперед</a></li>
-                    {% endif %}
-                    {% if next_url %}
-                    <li class="page-item"><a class="page-link" href="{{ next_url }}">Назад</a></li>
-                    {% endif %} 
-                </ul>
-        
+            <div class="card">
+                <div class="card-header bg-info">
+                    <b> Автор:</b> {{ post.author.username }}
+                    <b> Дата:</b> {{ post.timestamp.strftime('%H:%M  %d.%m.%Y') }}
+                    <b>ID:</b>
+                </div>
+                <div class="card-body">{{ post.text|safe }}</div>
             </div>
+            <br>
+            {% endfor %}
+
+
+            <ul class="pagination">
+                {% if prev_url %}
+                <li class="page-item"><a class="page-link" href="{{ prev_url }}">Вперед</a></li>
+                {% endif %}
+                {% if next_url %}
+                <li class="page-item"><a class="page-link" href="{{ next_url }}">Назад</a></li>
+                {% endif %}
+            </ul>
+
         </div>
-        </div>
+    </div>
+</div>
 
 
 {% endblock %}

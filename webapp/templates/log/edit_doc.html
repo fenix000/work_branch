@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container" style="margin-top:30px">
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post">
+
+                <div class='form-group'>
+                    {# including the SummerNote control on the form, from CDN #}
+                    <label for='summernote'>Новый документ:</label>
+                    <p> <input type="text" name="editortitle" class="form-control-plaintext"
+                            placeholder="Заголовок">{{ edit_doc.title }} </p>
+                    <textarea id="summernote" name="editordata" class='form-control'>{{edit_doc.text}}</textarea>
+                    <script>
+                        $('#summernote').summernote({
+                            toolbar: [
+                                // [groupName, [list of button]]
+                                ['style', ['bold', 'italic', 'underline', 'clear']],
+                                ['fontsize', ['fontsize']],
+                                ['color', ['color']],
+                                ['para', ['ul', 'ol', 'paragraph']],
+                                ['height', ['height']]
+                                ['table', ['table']],
+                                ['insert', ['link', 'picture', 'video']],
+                            ]
+                        });
+                    </script>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
