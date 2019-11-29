@@ -9,14 +9,18 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>Имя Фамилия</th>
+                <th>Должность</th>
+                <th>ФИО</th>
+                <th>Почта</th>
                 <th>Телефон</th>
             </tr>
         </thead>
         {% for user in user_contacts %}
         <tbody>
             <tr>
+                <td>{{ user.about_me }}</td>
                 <td>{{ user.fullname }}</td>
+                <td>{{ user.email }}</td>
                 <td>{{ user.phone }}</td>
             </tr>
         </tbody>

@@ -76,15 +76,16 @@
             </ul>
 
             {% for post in posts %}
+            <br>
             <div class="card">
-                <div class="card-header bg-info">
-                    <b> Автор:</b> {{ post.author.username }}
-                    <b> Дата:</b> {{ post.timestamp.strftime('%H:%M  %d.%m.%Y') }}
-                    <b>ID:</b>
+                <div class="card-header">
+                    <b> Автор: </b> {{ post.author.fullname }}
+                    <b> Дата: </b> {{ post.timestamp.strftime('%H:%M  %d.%m.%Y') }}
+                    <b>ID: <a href=" {{url_for('log.edit_post',id=post.id)}}">{{ post.id }}</a></b>
                 </div>
                 <div class="card-body">{{ post.text|safe }}</div>
+
             </div>
-            <br>
             {% endfor %}
 
 

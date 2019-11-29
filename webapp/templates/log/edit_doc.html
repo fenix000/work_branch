@@ -8,9 +8,9 @@
             <form method="post">
 
                 <div class='form-group'>
-                    {# including the SummerNote control on the form, from CDN #}
-                    <label for='summernote'>Новый документ:</label>
-                    <p> <input type="text" name="editortitle" class="form-control" placeholder="{{ edit_doc.title }}">
+
+                    <p> <input type="text" name="editortitle" class="form-control" {% if edit_doc %}
+                            placeholder="{{ edit_doc.title }}" {% else %} required="true" {% endif %}>
                         </input></p>
                     <textarea id="summernote" name="editordata" class='form-control'>{{ edit_doc.text }}</textarea>
                     <script>

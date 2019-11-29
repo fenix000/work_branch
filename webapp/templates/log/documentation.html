@@ -1,55 +1,85 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!--Menu category of documantation-->
-<div class="container" style="margin-top:65px">
+<div class="container" style="margin-top:58px">
     <div class="row">
-        <div class="col-sm-2 panel left" style="position: fixed; left: 5px;">
-            <div class=" container">
-                <h2> </h2>
-                <table class="table table-hover">
-                    {% for category in docs_category %}
-                    <tbody>
-                        <tr>
-                            <H1>
-                                <td><a href=" {{ url_for('log.doc_list', id=category.id)}}">{{ category.name }}</a></td>
-                            </H1>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+        <div class="col-sm-4">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {% for message in messages %}
+                {{ message }}<br>
+                {% endfor %}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endif %}
+            {% endwith %}
 
-                <tr>
+        </div>
+    </div>
+</div>
+<!--Menu category of documantation-->
+
+<div class="row">
+    <div class="col-sm-2 panel left" style="position: fixed; left: 5px;">
+        <div class=" container">
+            <h2> </h2>
+            <table class="table table-hover">
+                {% for category in docs_category %}
+                <tbody>
+                    <tr>
+                        <H1>
+                            <td><a href=" {{ url_for('log.doc_list', id=category.id)}}">{{ category.name }}</a></td>
+                        </H1>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+
+            <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Новая категория
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
                     <form action="" method="POST" class="form-group">
                         {{ form.hidden_tag() }}
-                        <div class="form-group">
+                        <div class="form-group mb-2">
                             {{ form.name.label }}
                             {{ form.name }}
                         </div>
                         {{ form.submit() }}
 
                     </form>
-                </tr>
+                </div>
             </div>
+            <a class="btn btn-success" href="{{ url_for('log.edit_doc') }}">Новый документ</a>
         </div>
-        <!--List documentation-->
-        <div class="col-3 my-sidebar">
-            <table class="table table-hover">
-                {% if docs_list %}
-                {% include "log/_doc_list.html" %}
-                {% endif %}
-            </table>
-            <a class="nav-link btn btn-success" href="{{ url_for('log.edit_doc') }}">Новый документ</a>
-        </div>
-        <!--Doc body-->
-        <div class="col container-fluid">
+    </div>
 
-            {% if docs_body %}
-            {% include "log/_doc_view.html" %}
+    <!--List documentation-->
+    <div class="col-3 my-sidebar">
+        <table class="table table-hover">
+            {% if docs_list %}
+            {% include "log/_doc_list.html" %}
             {% endif %}
-        </div>
-
+        </table>
 
     </div>
+    <!--Doc body-->
+    <div class="col container-fluid">
+
+        {% if docs_body %}
+        {% include "log/_doc_view.html" %}
+        {% endif %}
+    </div>
+
+
+</div>
 </div>
 {% endblock content %}

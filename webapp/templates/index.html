@@ -7,13 +7,17 @@
         <div class="col-sm-4">
             {% with messages = get_flashed_messages() %}
             {% if messages %}
-            <div class="alert alert-warning" role="alert">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 {% for message in messages %}
                 {{ message }}<br>
                 {% endfor %}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             {% endif %}
             {% endwith %}
+
         </div>
     </div>
 </div>
@@ -27,7 +31,7 @@
             <br>
             <div class="card">
                 <div class="card-header">
-                    <b> Автор: </b> {{ post.author.username }}
+                    <b> Автор: </b> {{ post.author.fullname }}
                     <b> Дата: </b> {{ post.timestamp.strftime('%H:%M  %d.%m.%Y') }}
                     <b>ID: <a href=" {{url_for('log.edit_post',id=post.id)}}">{{ post.id }}</a></b>
                 </div>

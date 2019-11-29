@@ -94,7 +94,7 @@ def user(username):
         current_user.about_me = form.about_me.data
         db.session.commit()
         flash('Изменения сохранены')
-        return redirect(url_for('log.index'))
+        return redirect(url_for('user.user, username=current_user.username'))
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.fullname.data = current_user.fullname

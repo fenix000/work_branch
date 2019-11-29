@@ -50,7 +50,7 @@ def edit_post(id=None):
         db.session.commit()
         flash('Запись добавлена!')
         return redirect(url_for('log.index'))
-    return render_template('log/edit_post.html', title='Редактировать запись!', edit_post=edit_post,  posts=posts)
+    return render_template('log/edit_post.html', edit_post=edit_post,  posts=posts)
 
 
 @blueprint.route('/delete/<id>')
@@ -70,6 +70,7 @@ def edit_doc(id=None):
     category = Category.query.order_by(Category.name).all()
     if id:
         edit_doc = Doc.query.filter_by(id=id).first_or_404()
+        # title = edit_doc.title,
         # category = edit_doc.categiry_id
         if edit_doc is None:
             return (404)
@@ -78,8 +79,9 @@ def edit_doc(id=None):
 
     if request.method == "POST":
         if id:
-            # select_category = Category.query.filter_by(
-            #     name=request.form.get('editorcategory')).first_or_404()
+            select_category = Category.query.filter_by(
+                name=request.form.get('editorcategory')).first_or_404()
+            edit_doc.category_id = select_category.id
             edit_doc.text = request.form.get('editordata')
             db.session.add(edit_doc)
         else:
