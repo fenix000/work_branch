@@ -1,0 +1,1110 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container" style="margin-top:68px">
+
+    <p> Контакты:</p>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Имя Фамилия</th>
+                <th>Телефон</th>
+            </tr>
+        </thead>
+        {% for user in user_contacts %}
+        <tbody>
+            <tr>
+                <td>{{ user.fullname }}</td>
+                <td>{{ user.phone }}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+</div>
+
+
+<p></p>
+<p class="rvps10"><span class="rvts18"><br/></span></p>
+<div class="rvps10"><table border="1" cellpadding="0" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts18">Круг обязанностей</span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts18"> ФИО</span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts18"> e-mail</span></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps3"><span class="rvts18">Телефон</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Технический директор</span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Овчинников Дмитрий</span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><a class="rvts20" href="mailto:dovchinnikov@telerent.tv">dovchinnikov@telerent.tv</a></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">+7 (906) 765-99-25</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Dalet</span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Котте Александр</span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><a class="rvts20" href="mailto:akotte@telerent.tv">akotte@telerent.tv</a></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">+7 (926) 766-43-46</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Сеть, AD, сетевая безопасность</span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Безуглый Алексей </span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><a class="rvts20" href="mailto:abezugliy@telerent.tv">abezugliy@telerent.tv</a></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">+7 (926) 403-21-55</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Титры, графика - VizRT</span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Турта Алексей</span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><a class="rvts20" href="mailto:aturta@telerent.tv">aturta@telerent.tv</a></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">+7 (916) 762-21-00</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts19">Mac OS, монтажки</span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts19">Пьянков Николай</span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><a class="rvts21" href="mailto:npyankov@me.com">npyankov@me.com</a></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts19">+7 (916) 094-58-38</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Телепроизводство</span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Роман Васильев</span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><a class="rvts20" href="mailto:rvasilyev@telerent.tv">rvasilyev@telerent.tv</a></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">+7 (916) 637-54-12</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Телепроизводство</span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Артем Ельцов</span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><a class="rvts20" href="mailto:aelcov@telerent.tv">aelcov@telerent.tv</a></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">+7 (929) 636-65-64</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Начальник смены</span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">+7 (903) 228-37-68</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18">Дежурный Dalet</span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">+7 (968) 763-38-19</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="236" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps14"><span class="rvts18"><br/></span></p>
+</td>
+<td width="213" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="165" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="216" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps12"><span class="rvts18"><br/></span></p>
+<p class="rvps12"><span class="rvts18"><br/></span></p>
+<div class="rvps15"><table border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="352" height="20" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="20" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="20" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="20" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">Сотрудники ЗАО Телерент:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Овчинников Дмитрий Владимирович</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-906-765-99-25</span></p>
+</td>
+<td colspan="2" width="715" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Руководитель </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Заулин Александр Александрович</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-553-86-53</span></p>
+</td>
+<td colspan="2" width="715" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Начальник информационного IT комплекса </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Котте Александр Евгеньевич</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-766-43-46</span></p>
+</td>
+<td colspan="2" width="715" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Ведущий инженер информационного IT комплекса </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Алексей Турта</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-762-21-00</span></p>
+</td>
+<td colspan="2" width="715" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Начальник комплекса компьютерной графики</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Васильев Роман Леонидович</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-637-54-12</span></p>
+</td>
+<td colspan="2" width="715" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Ведущий инженер телепроизводственного комплекса </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Рейзь Александр Владимирович</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-910-443-47-07</span></p>
+</td>
+<td colspan="2" width="715" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Ведущий инженер комплекса эфирной автоматизации</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td colspan="2" width="715" height="25" valign="bottom" style="padding: 0px;"><p class="rvps3"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="4" width="1294" height="25" valign="bottom" style="padding: 0px;"><p class="rvps17"><span class="rvts22">Начальники смен</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts23">Телерент:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts23">ОТР:</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Дежурный</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-929-542-08-95, 8-926-717-61-22</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Касперович Дмитрий Александрович</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-591-71-84</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Ермаков Дмитрий</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-313-00-67</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Масленников Юрий Васильевич</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-500-56-27</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Чернышёв Александр Евгеньевич</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-910-091-59-53</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Морозов Сергей Николаевич</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-905-705-37-93</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Амелин Иван Николаевич</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-967-078-41-47</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Яцевич Олег Анатольевич</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-971-48-06</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Белов Георгий Борисович</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-711-86-96</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Стационарный</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-495-617-55-38</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Кситал машзал 1</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-536-89-71</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Кситал машзал 2</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-536-89-75</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Дежурный DALET</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-968-763-38-19</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="4" width="1294" height="25" valign="bottom" style="padding: 0px;"><p class="rvps17"><span class="rvts22">Инженеры</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts23">Телерент:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts23">ОТР:</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Жилинский Константин</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-884-14-70</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts24">Старшие инженеры АСБ-2</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Aнтонов Сергей</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-740-60-10</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Кулешова Кира Борисовна</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-963-715-33-93</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Кацман Роман Викторович</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-376-03-86</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Горшков Александр Евгеньевич</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-925-771-21-14</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Баринов Владимир</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-907-31-93</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Прокудин Никита Андреевич</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-985-110-67-81</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Морозов Михаил Владимирович</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-787-01-36</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">АЦ:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts24">Старшие инженеры АСБ-1</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Голицына Елена Владимировна</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-925-035-54-85</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Панченко Андрей Александрович</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-978-63-14</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Морозов Юрий Викторович</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-101-52-36</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Шалашов Юрий Алексеевич</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-617- 83-96</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">PTSYS:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Голубков Станислав</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-207-63-01</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">ГИП</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Кузенков Алексей</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-602-18-38</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Callrec, Clearcom</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Самсонов Василий</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-874-56-07</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">АЦ</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Лихачёв Андрей</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-539-80-30</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Связь</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Платонов Павел Clearcom</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-612-32-33</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Связь </span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Иванов Олег</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-904-52-27</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">ОКНО-ТВ:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Самусев Андрей</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-543-67-44</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Главный монтажник</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Фёдорова Наталья</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-192-90-92</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Склад ОКНО-ТВ</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Фоломеев Константин</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-114-99-16</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps3"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">Хозяйственный департамент:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps3"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Игорь Яременко</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-734-68-60</span></p>
+</td>
+<td colspan="2" width="715" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Ответственный Телерент по материальной части</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Кузнецов Николай</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-906-793-79-95</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Пропуска, такелажники</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Кузнецова Алёна</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-682-08-81</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Склад</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-917-096-65-86</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">Телецентр:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Евгений Евгеньевич</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-909-651-85-77</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">ключи</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Давид</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-925-299-05-44</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">материально-техническое обеспечение</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Валерий Имильич</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-508-49-92</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">технадзор, кондиционер</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Вячеслав</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-411-12-34</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">прораб</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Александр</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-012-66-12</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">мебель, сборщик</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Татьяна</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-301-01-57</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">уборщицы</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">Магистр электрика:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Роман Пузиков </span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-905-778-69-08</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Дмитрий Пузиков</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-668-22-07</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">ОТР:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Герман Эдуардович</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-790-36-73</span></p>
+</td>
+<td colspan="2" width="715" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Хозяйственник, региональное развитие</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Селянин Владимир Евгеньевич</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-611-89-36</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">начальник охраны</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Каткин Юрий Викторович</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-956-05-43</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">зам. Селянина</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Миронченко Михаил</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-051-80-85</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Сергей Рыжов</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-173-39-51</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Александр Минеев</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-163-81-02</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Юрий</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-447-82-69</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">гл. худ. Осветитель ОТР</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Панфилов Михаил</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-064-8282</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">звук АСБ-1</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Милена. Координация каналов</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-903-013-76-41</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">Airprof (Кондиционер):</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Илья</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-925-010-70-73</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Баранов Сергей Николаевич</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-925-010-70-10</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">ведущий инженер по сервисному обслуживанию</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-925-010-70-12</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">директор</span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">EVERTZ:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Киринов Юрий</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-985-767-75-71</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">Omneon:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Коняев Андрей</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-003-23-65</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">Light Technology:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Брауде Владимир</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-916-191-09-44</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">Network:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Михаил Леонидович Товкало</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-985-784-56-36</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Дмитрий</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-023-46-27</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Алексей</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-926-578-59-21</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps16"><span class="rvts22">Grass-valley:</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Офис </span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">8-495-787-06-55</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Илья Темерев</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"> +7-905-741-60-62</span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="352" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18">Денис Горячун</span></p>
+</td>
+<td width="227" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="588" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+<td width="127" height="25" valign="bottom" style="padding: 0px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+
+{% endblock content %}

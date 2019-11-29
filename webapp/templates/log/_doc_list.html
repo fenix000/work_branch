@@ -1,0 +1,9 @@
+{% for doc in docs_list %}
+<tbody>
+    <tr>
+        <H1>
+            <td><a href=" {{ url_for('log.doc_view', title=doc.title, id=doc.category_id)}}">{{ doc.title }}</a></td>
+        </H1>
+    </tr>
+    {% endfor %}
+</tbody>

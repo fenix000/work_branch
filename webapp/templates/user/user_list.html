@@ -13,6 +13,7 @@
                 <th>Телефон</th>
                 <th>E-mail</th>
                 <th>Права доступа</th>
+                <th>Удалить?</th>
             </tr>
         </thead>
         {% for user in all_user %}
@@ -22,37 +23,12 @@
                 <td>{{ user.phone }}</td>
                 <td>{{ user.email }}</td>
                 <td>{{ user.role }}</td>
-                <td><button type="button" class="btn btn-danger" data-toggle="modal"
-                        data-target="#myModal">Удалить.</button>
-                    <div class="modal" id="myModal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Точно удалить?</h4>
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <!-- Modal footer -->
-                                <div class="modal-footer">
-                                    <a href="{{url_for('user.user_delete',id=user.id)}}">
-                                        <button type="button" class="btn btn-danger">Удалить</button></a>
-                                    <button type="button" class="btn btn-success" data-dismiss="modal">Отмена</button>
-                </td>
-
+                <td><a href="{{url_for('user.user_delete',id=user.id)}}">
+                        <button type="button" class="btn btn-danger">Удалить</button></a></td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
 </div>
-
-</div>
-</div>
-</div>
-</td>
-</tr>
-</tbody>
-{% endfor %}
-</table>
-</div>
-
-
-
 
 {% endblock content %}

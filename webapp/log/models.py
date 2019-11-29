@@ -23,16 +23,7 @@ class Doc(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.now)
 
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
-    category = db.relationship('Category', backref=db.backref('docs', lazy='dynamic'))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-
-    def __init__(self, title, body, category, timestamp=None):
-        self.title = title
-        self.body = text
-        if timestamp is None:
-            timestamp = datetime.utcnow()
-        self.timestamp = timestamp
-        self.category = category
 
     def __repr__(self):
         return '<Doc {}'.format(self.body)
@@ -41,6 +32,7 @@ class Doc(db.Model):
 class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), index=True, unique=True)
+    docs = db.relationship('Doc', backref='category', lazy='dynamic')
 
     def __init__(self, name):
         self.name = name

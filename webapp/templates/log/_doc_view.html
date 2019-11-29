@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-header">
+        <b> Автор: </b> {{ docs_body.author.username }} <br>
+        <b> Дата: </b> {{ docs_body.timestamp.strftime('%H:%M  %d.%m.%Y') }} <br>
+        <a href="{{ url_for('log.edit_doc', id=docs_body.id) }}" class="btn btn-info" role="button">Редактировать</a>
+        <br>
+        <B>{{ docs_body.title }}</B>
+    </div>
+    <div class="card-body">{{ docs_body.text|safe }}</div>
+
+</div>

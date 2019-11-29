@@ -48,7 +48,7 @@ def login():
 
 
 @blueprint.route('/register', methods=['GET', 'POST'])
-@admin_required
+# @admin_required
 def register():
     # if current_user.is_authenticated:
     #     return redirect(url_for('log.index'))
@@ -58,7 +58,7 @@ def register():
 
 
 @blueprint.route('/registration', methods=['GET', 'POST'])
-@admin_required
+# @admin_required
 def registration():
     title = 'Регистрация'
     form = UserFormRegistration()

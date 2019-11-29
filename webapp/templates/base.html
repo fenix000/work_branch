@@ -24,16 +24,18 @@
         <li class="nav-item"><a class="nav-link" href="{{ url_for('log.index') }}">Главная</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ url_for('log.edit_post') }}">Новая запись</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ url_for('log.documentation') }}">Документация</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url_for('log.edit_post') }}">Контакты</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url_for('user.user', username=current_user.username) }}">Профиль</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('log.contacts') }}">Контакты</a></li>
+        <li class="nav-item"><a class="nav-link"
+            href="{{ url_for('user.user', username=current_user.username) }}">Профиль</a></li>
 
-      <li class=" nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Админка</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="{{ url_for('user.register') }}">Новый пользователь</a>
-              <a class="dropdown-item" href="{{ url_for('user.user_list') }}">Список пользователей</a>
-            </div>
+        <li class=" nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Админка</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{ url_for('user.register') }}">Новый пользователь</a>
+            <a class="dropdown-item" href="{{ url_for('user.user_list') }}">Список пользователей</a>
+          </div>
         </li>
+
         <li class="nav-item"><a class="nav-link btn btn-primary" href="{{ url_for('user.logout') }}">Выход</a></li>
       </ul>
     </div>

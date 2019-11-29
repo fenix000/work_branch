@@ -66,9 +66,11 @@ def post_delete(id):
 @blueprint.route('/edit_doc', methods=['GET', 'POST'])
 @blueprint.route('/edit_doc/<id>', methods=['GET', 'POST'])
 @login_required
-def edit_document(id=None):
+def edit_doc(id=None):
+    category = Category.query.order_by(Category.name).all()
     if id:
         edit_doc = Doc.query.filter_by(id=id).first_or_404()
+        # category = edit_doc.categiry_id
         if edit_doc is None:
             return (404)
     else:
@@ -76,28 +78,62 @@ def edit_document(id=None):
 
     if request.method == "POST":
         if id:
-            edit_doc = Doc(title=request.form.get('editortitle'),
-                           text=request.form.get('editordata'))
+            # select_category = Category.query.filter_by(
+            #     name=request.form.get('editorcategory')).first_or_404()
+            edit_doc.text = request.form.get('editordata')
             db.session.add(edit_doc)
         else:
+            select_category = Category.query.filter_by(
+                name=request.form.get('editorcategory')).first_or_404()
             edit_doc = Doc(title=request.form.get('editortitle'),
-                           text=request.form.get('editordata'), author=current_user)
+                           text=request.form.get('editordata'), author=current_user, category=select_category)
             db.session.add(edit_doc)
         db.session.commit()
         flash('Запись добавлена!')
-    return render_template('log/edit_doc.html', title='Документация!')
+        return redirect(url_for('log.documentation'))
+    return render_template('log/edit_doc.html', edit_doc=edit_doc, category=category)
 
 
 @blueprint.route('/documentation', methods=['GET', 'POST'])
+@blueprint.route('/documentation/<id>', methods=['GET', 'POST'])
+@blueprint.route('/documentation/<id>/<title>', methods=['GET', 'POST'])
 @login_required
-def documentation():
+def documentation(title=None, id=None):
     form = CategoryForm()
     docs_category = Category.query.order_by(Category.name).all()
+    # title = Doc.query.order_by(Doc.title).all()
+    docs_list = ''
+    docs_body = ''
+    if id:
+        docs_list = Doc.query.filter_by(category_id=id).all()
+    if title:
+        docs_body = Doc.query.filter_by(title=title).first_or_404()
     if request.method == "POST":
         if form.validate_on_submit():
-            new_category = Category(name = form.name.data)
+            new_category = Category(name=form.name.data)
             db.session.add(new_category)
         db.session.commit()
         flash('Done')
         return redirect(url_for('log.documentation'))
-    return render_template('log/documentation.html', title='Документация!', docs_category=docs_category, form=form)
+    return render_template('log/documentation.html', docs_category=docs_category, docs_list=docs_list, form=form, docs_body=docs_body, title=title)
+
+
+@blueprint.route('/documentation/<id>', methods=['GET', 'POST'])
+@login_required
+def doc_list(id):
+    docs_list = Doc.query.filter_by(category_id=id).all()
+    return render_template('log/documentation.html', docs_list=docs_list)
+
+
+@blueprint.route('/documentation/<id>/<title>', methods=['GET', 'POST'])
+@login_required
+def doc_view(title):
+    docs_body = Doc.query.filter_by(title=title).first_or_404()
+    return render_template('log/documentation.html', docs_body=docs_body)
+
+
+@blueprint.route('/contact', methods=['GET'])
+@login_required
+def contacts():
+    user_contacts = User.query.order_by(User.id).all()
+    return render_template('log/contacts.html', user_contacts=user_contacts)
